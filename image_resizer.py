@@ -5,10 +5,6 @@ def resize_images(input_directory, output_directory, target_size):
     """
     Resizes all images in the input directory and saves them in the output directory.
     
-    Args:
-        input_directory (str): Path to the directory containing original images.
-        output_directory (str): Path to save resized images.
-        target_size (tuple): Target size (width, height) for resized images.
     """
     # Check if input directory exists
     if not os.path.exists(input_directory):
@@ -37,9 +33,9 @@ def resize_images(input_directory, output_directory, target_size):
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
 
-# Example usage
-input_dir = "/Users/tusharsharma/Desktop/input_images"  # Update with actual path
-output_dir = "/Users/tusharsharma/Desktop/output_images"  # Update with actual path
-resize_dimensions = (300, 300)  # Target size: 300x300 pixels
+
+input_dir = "/Users/tusharsharma/Desktop/input_images"  
+output_dir = "/Users/tusharsharma/Desktop/output_images"  
+resize_dimensions = (300, 300)  
 
 resize_images(input_dir, output_dir, resize_dimensions)
